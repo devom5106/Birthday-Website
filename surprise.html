@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Birthday Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #f0f7ff);
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      background: linear-gradient(to right, #ff9800, #9c27b0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sub-text {
+      font-size: 1.2rem;
+      margin: 10px 0 30px;
+    }
+
+    /* Card container */
+    .card-container {
+      perspective: 1000px;
+      display: inline-block;
+    }
+
+    .card {
+      width: 700px;
+      height: 600px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      cursor: pointer;
+    }
+
+    .card.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      gap:25px;
+    }
+
+    .card-front {
+      background: linear-gradient(135deg, #ff5f6d, #9c27b0);
+      color: white;
+      flex-direction: column;
+    }
+
+    .card-front .gift {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .card-back {
+      background: linear-gradient(135deg, #42e695, #3bb2b8);
+      color: white;
+      transform: rotateY(180deg);
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #555;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+  .wish-card {
+  width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fef9ff, #fefcff);
+  position: relative;
+}
+
+
+
+.wish-card h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.wish-card p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.wish-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #a855f7;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+.video-card {
+  max-width:800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fef9ff, #fefcff);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+  </style>
+</head>
+<body>
+
+  <a href="home.html">← Back to Birthday Home</a>
+  <h1>🎁 Your Special Surprise! 🎁</h1>
+  <p class="sub-text">🎂 Here's to another year of being absolutely amazing!</p>
+
+  <div class="card-container">
+    <div class="card" id="birthdayCard">
+      <!-- Front -->
+      <div class="card-face card-front">
+        <div class="gift">🎁</div>
+        <h2>Special Birthday Card</h2>
+        <p>Click to open your personalized message!</p>
+      </div>
+      <!-- Back -->
+      <div class="card-face card-back">
+        <h2>Happy Birthday! 🎉</h2>
+        <p>Wishing you endless joy, love, and success in the year ahead.  
+        Mom, You truly deserve all the happiness of this world. You are the best mom and I love you so much. You do all the possible things for our family, even if you are not well. You and Papa are the heart of our family. You both have made a lot of sacrifices for my and shivi's success and I will forever be grateful to you.
+        I promise I will work harder to make you happy and fulfill every luxury you deserve.💖
+        Thank you for everything! Happy Birthday Mom!
+      </div>
+    </div>
+  </div>
+
+  <div class="wish-card">
+  <h2>✨ Make Your Special Birthday Wish ✨</h2>
+  <p>Share your most heartfelt wish for this new year of life. Your wish will be treasured! 💖</p>
+  
+  <form action="mailto:devom.garg@gmail.com" enctype="text/plain" method="POST">
+    <label for="wish" class="wish-label">🌟 What is your special birthday wish? 🌟</label>
+    <textarea id="wish" name="wish" placeholder="I wish for..."></textarea>
+    <button type="submit" class="submit-btn">🎂 Submit My Birthday Wish 🎂</button>
+  </form>
+  
+  <p class="note">Your wish will be sent with love and birthday magic! ✨</p>
+</div>
+
+<div class="video-card">
+  <h2>✨ Celebrate with a Birthday Video ✨</h2>
+  <p>Watch this special video and make your day extra magical! 🎉</p>
+  
+  <div class="video-wrapper">
+    <video controls>
+      <source src="Birthday_Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <p class="note">Enjoy this memory video with love and birthday magic! ✨</p>
+</div>
+
+  <script>
+    const card = document.getElementById('birthdayCard');
+    card.addEventListener('click', () => {
+      card.classList.toggle('is-flipped');
+    });
+  </script>
+
+</body>
+</html>

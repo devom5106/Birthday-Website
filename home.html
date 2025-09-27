@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6f0; /* Baby pink background */
+      text-align: center;
+      padding: 50px;
+      overflow: hidden; /* hide balloons going outside */
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff4ecb, #6a5af9);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .cake {
+      font-size: 3rem;
+      margin: 20px 0;
+      animation: bounce 1.5s infinite;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .game-btn {
+      background: linear-gradient(to right, #f54ea2, #ff7676);
+    }
+
+    .surprise-btn {
+      background: linear-gradient(to right, #ff9d6c, #ff6a00);
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      font-size: 2.5rem;
+      animation: float 10s linear infinite;
+    }
+
+    /* Different balloons positions and timings */
+    .balloon:nth-child(1) { left: 5%;  animation-duration: 8s; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 2s; }
+    .balloon:nth-child(3) { left: 25%; animation-duration: 12s; animation-delay: 4s; }
+    .balloon:nth-child(4) { left: 40%; animation-duration: 9s;  animation-delay: 1s; }
+    .balloon:nth-child(5) { left: 55%; animation-duration: 11s; animation-delay: 3s; }
+    .balloon:nth-child(6) { left: 70%; animation-duration: 13s; animation-delay: 5s; }
+    .balloon:nth-child(7) { left: 80%; animation-duration: 10s; animation-delay: 1.5s; }
+    .balloon:nth-child(8) { left: 90%; animation-duration: 14s; animation-delay: 3.5s; }
+
+    /* Keyframes */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes float {
+      0% { bottom: -150px; opacity: 0; transform: translateX(0); }
+      20% { opacity: 1; }
+      50% { transform: translateX(30px); }
+      100% { bottom: 110%; opacity: 0; transform: translateX(-30px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 HAPPY BIRTHDAY PRETTY LITTLE MUMMY! 🎉</h1>
+  <p>The world's most pretty mummy has her birthday today! 🎂</p>
+  <div class="cake">🎂</div>
+  <p>Your nalayak son has prepared something special just for you...</p>
+
+  <div class="btn-container">
+    <button class="btn game-btn" id="playGame">🎮 Play Birthday Game</button>
+    <button class="btn surprise-btn" id="openSurprise">🎁 Open Your Surprise</button>
+  </div>
+
+  <!-- Balloons (more added) -->
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+
+  <script>
+    // Redirect using DOM and Event Listeners
+    document.getElementById("playGame").addEventListener("click", function() {
+      window.location.href = "game.html"; // Change to your game page
+    });
+
+    document.getElementById("openSurprise").addEventListener("click", function() {
+      window.location.href = "surprise.html"; // Change to your surprise page
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Says Game Zone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #eef3fc);
+      text-align: center;
+      padding: 50px;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #6a5af9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff4ecb, #6a5af9);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .game-container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+
+    .stats div {
+      background: #f7f7f7;
+      padding: 10px 20px;
+      border-radius: 15px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .new-game {
+      background: linear-gradient(to right, #f54ea2, #ff7676);
+    }
+
+    .hint {
+      background: linear-gradient(to right, #ff9d6c, #ff6a00);
+    }
+
+    .flexbox-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding: 20px;
+      background: #fdf2f8;
+      border: 2px dashed #ff4ecb;
+      border-radius: 15px;
+    }
+
+    .flexbox-container p {
+      margin: 0;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .surprise-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(to right, #ff9d6c, #ff6a00);
+      color: white;
+      transition: transform 0.2s ease;
+    }
+
+    .surprise-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="home.html">← Back to Birthday Celebration</a>
+  <h1>🎮 Simon Says Game Zone 🎮</h1>
+  <p>Welcome to the Simon Says challenge! Follow the pattern carefully and test your memory.</p>
+
+  <div class="game-container">
+    <h2>Simon Says Memory Challenge</h2>
+    <p>Repeat the sequence of colors and sounds correctly to score points.</p>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div>🎮 Level: 1</div>
+      <div>⭐ Score: 0</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons"><a href = "index.html">
+      <button class="btn new-game">🎲 New Game</button></a>
+    </div>
+
+    <!-- Flexbox for your custom text -->
+    <div class="flexbox-container">
+      <p>Mom, In this game, you will be shown some colored boxes in a grid. When you will start the game, one box will flash and you will have to select that box in the first move. Now, the next box will flash, then you have to select the previous flashed box and the new box in the correct order. Next, one more box will flash, then you will have to select all the three boxes which have been flashed till now, in the correct order. This is the game idea.
+    </div>
+  </div>
+  <a href="surprise.html">
+  <button class="surprise-btn">🎁 Ready for Your Surprise?</button>
+    </a>
+</body>
+</html>
